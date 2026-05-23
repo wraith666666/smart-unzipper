@@ -29,9 +29,10 @@ git push origin $TagName
 # 3. Create GitHub release and upload EXE (requires GitHub CLI: https://cli.github.com)
 if (Get-Command gh -ErrorAction SilentlyContinue) {
     Write-Host "Creating GitHub release $TagName..." -ForegroundColor Cyan
+    $notes = "## What's new`n`n- Initial release`n`n## Download`nRun $ExeName.exe directly - no Python required."
     gh release create $TagName "dist\$ExeName.exe" `
         --title "$TagName" `
-        --notes "## What's new`n`n- Initial release`n`n## Download`nRun \`$ExeName.exe\` directly — no Python required."
+        --notes $notes
     Write-Host "Release published!" -ForegroundColor Green
 } else {
     Write-Host ""
