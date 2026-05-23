@@ -38,10 +38,7 @@ This utility solves that — point it at a folder, pick your ZIPs, click Extract
 
 > _Screenshots coming soon — place app screenshots here._
 
-<!-- Replace the lines below with actual images after capturing -->
-<!-- ![Main Window](screenshots/main.png) -->
-<!-- ![Extraction in Progress](screenshots/extracting.png) -->
-<!-- ![Done Dialog](screenshots/done.png) -->
+![App Screenshot](screenshot.png)
 
 ---
 
@@ -52,8 +49,8 @@ This utility solves that — point it at a folder, pick your ZIPs, click Extract
 **Requirements:** Python 3.8 or higher (Windows)
 
 ```bash
-git clone https://github.com/yourusername/bulk-zip-extractor.git
-cd bulk-zip-extractor
+git clone https://github.com/wraith666666/smart-unzipper.git
+cd smart-unzipper
 python unzipper.py
 ```
 
@@ -121,9 +118,12 @@ All standard library — no third-party packages required to run.
 ## Project Structure
 
 ```
-bulk-zip-extractor/
+smart-unzipper/
 ├── unzipper.py          # Main application (single file)
-├── icon.ico             # App icon (optional, for EXE builds)
+├── build_release.ps1    # Script to build EXE and publish GitHub release
+├── icon.ico             # App icon for EXE builds
+├── icon.png             # App icon (PNG)
+├── screenshot.png       # App screenshot
 ├── requirements.txt     # Empty — no dependencies
 ├── .gitignore
 ├── LICENSE
