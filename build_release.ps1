@@ -15,7 +15,7 @@ pip install pyinstaller --quiet
 pyinstaller --onefile --windowed --icon=icon.ico --name $ExeName unzipper.py
 
 if (-not (Test-Path "dist\$ExeName.exe")) {
-    Write-Error "Build failed — EXE not found in dist\"
+    Write-Error "Build failed - EXE not found in dist\"
     exit 1
 }
 
